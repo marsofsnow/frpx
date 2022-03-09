@@ -164,6 +164,15 @@ func parseClientCommonCfgFromCmd() (cfg config.ClientCommonConf, err error) {
 	return
 }
 
+
+func RunFrpxClient(cfgFilePath string) error{
+	cfg, pxyCfgs, visitorCfgs, err := config.ParseClientConfig(cfgFilePath)
+	if err != nil {
+		panic(err)
+	}
+	return  startService(cfg, pxyCfgs, visitorCfgs, cfgFilePath)
+}
+
 func runClient(cfgFilePath string) error {
 	cfg, pxyCfgs, visitorCfgs, err := config.ParseClientConfig(cfgFilePath)
 	if err != nil {
