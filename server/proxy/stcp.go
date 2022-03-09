@@ -15,7 +15,7 @@
 package proxy
 
 import (
-	"github.com/fatedier/frp/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/config"
 )
 
 type STCPProxy struct {

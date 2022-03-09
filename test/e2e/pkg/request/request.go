@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fatedier/frp/test/e2e/pkg/rpc"
+	"github.com/marsofsnow/frpx/test/e2e/pkg/rpc"
 	libdial "github.com/fatedier/golib/net/dial"
 )
 

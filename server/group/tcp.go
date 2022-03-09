@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/fatedier/frp/server/ports"
+	"github.com/marsofsnow/frpx/server/ports"
 
 	gerr "github.com/fatedier/golib/errors"
 )

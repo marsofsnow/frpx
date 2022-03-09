@@ -19,7 +19,7 @@ import (
 	"net"
 	"net/http"
 
-	frpNet "github.com/fatedier/frp/pkg/util/net"
+	frpNet "github.com/marsofsnow/frpx/pkg/util/net"
 
 	"github.com/gorilla/mux"
 )

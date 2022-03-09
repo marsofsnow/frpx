@@ -23,13 +23,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/msg"
-	plugin "github.com/fatedier/frp/pkg/plugin/server"
-	frpNet "github.com/fatedier/frp/pkg/util/net"
-	"github.com/fatedier/frp/pkg/util/xlog"
-	"github.com/fatedier/frp/server/controller"
-	"github.com/fatedier/frp/server/metrics"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/msg"
+	plugin "github.com/marsofsnow/frpx/pkg/plugin/server"
+	frpNet "github.com/marsofsnow/frpx/pkg/util/net"
+	"github.com/marsofsnow/frpx/pkg/util/xlog"
+	"github.com/marsofsnow/frpx/server/controller"
+	"github.com/marsofsnow/frpx/server/metrics"
 
 	frpIo "github.com/fatedier/golib/io"
 )

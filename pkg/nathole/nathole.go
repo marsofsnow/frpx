@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatedier/frp/pkg/msg"
-	"github.com/fatedier/frp/pkg/util/log"
-	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/marsofsnow/frpx/pkg/msg"
+	"github.com/marsofsnow/frpx/pkg/util/log"
+	"github.com/marsofsnow/frpx/pkg/util/util"
 
 	"github.com/fatedier/golib/errors"
 	"github.com/fatedier/golib/pool"

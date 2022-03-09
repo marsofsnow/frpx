@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fatedier/frp/test/e2e/framework"
-	"github.com/fatedier/frp/test/e2e/pkg/request"
+	"github.com/marsofsnow/frpx/test/e2e/framework"
+	"github.com/marsofsnow/frpx/test/e2e/pkg/request"
 
 	. "github.com/onsi/ginkgo"
 )

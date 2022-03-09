@@ -21,8 +21,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/consts"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/consts"
 )
 
 func init() {

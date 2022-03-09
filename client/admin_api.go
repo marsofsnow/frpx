@@ -23,9 +23,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/fatedier/frp/client/proxy"
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/util/log"
+	"github.com/marsofsnow/frpx/client/proxy"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/util/log"
 )
 
 type GeneralResponse struct {

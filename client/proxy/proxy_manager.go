@@ -6,10 +6,10 @@ import (
 	"net"
 	"sync"
 
-	"github.com/fatedier/frp/client/event"
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/msg"
-	"github.com/fatedier/frp/pkg/util/xlog"
+	"github.com/marsofsnow/frpx/client/event"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/msg"
+	"github.com/marsofsnow/frpx/pkg/util/xlog"
 
 	"github.com/fatedier/golib/errors"
 )

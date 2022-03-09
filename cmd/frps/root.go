@@ -18,12 +18,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fatedier/frp/pkg/auth"
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/util/log"
-	"github.com/fatedier/frp/pkg/util/util"
-	"github.com/fatedier/frp/pkg/util/version"
-	"github.com/fatedier/frp/server"
+	"github.com/marsofsnow/frpx/pkg/auth"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/util/log"
+	"github.com/marsofsnow/frpx/pkg/util/util"
+	"github.com/marsofsnow/frpx/pkg/util/version"
+	"github.com/marsofsnow/frpx/server"
 
 	"github.com/spf13/cobra"
 )
@@ -95,7 +95,7 @@ func init() {
 
 var rootCmd = &cobra.Command{
 	Use:   "frps",
-	Short: "frps is the server of frp (https://github.com/fatedier/frp)",
+	Short: "frps is the server of frp (https://github.com/marsofsnow/frpx)",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if showVersion {
 			fmt.Println(version.Full())

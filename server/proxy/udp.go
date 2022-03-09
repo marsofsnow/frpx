@@ -22,11 +22,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/msg"
-	"github.com/fatedier/frp/pkg/proto/udp"
-	frpNet "github.com/fatedier/frp/pkg/util/net"
-	"github.com/fatedier/frp/server/metrics"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/msg"
+	"github.com/marsofsnow/frpx/pkg/proto/udp"
+	frpNet "github.com/marsofsnow/frpx/pkg/util/net"
+	"github.com/marsofsnow/frpx/server/metrics"
 
 	"github.com/fatedier/golib/errors"
 	frpIo "github.com/fatedier/golib/io"

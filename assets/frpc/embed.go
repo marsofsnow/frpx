@@ -3,7 +3,7 @@ package frpc
 import (
 	"embed"
 
-	"github.com/fatedier/frp/assets"
+	"github.com/marsofsnow/frpx/assets"
 )
 
 //go:embed static/*

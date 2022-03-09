@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fatedier/frp/pkg/auth"
-	plugin "github.com/fatedier/frp/pkg/plugin/server"
-	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/marsofsnow/frpx/pkg/auth"
+	plugin "github.com/marsofsnow/frpx/pkg/plugin/server"
+	"github.com/marsofsnow/frpx/pkg/util/util"
 
 	"github.com/go-playground/validator/v10"
 	"gopkg.in/ini.v1"

@@ -18,11 +18,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/consts"
-	"github.com/fatedier/frp/pkg/metrics/mem"
-	"github.com/fatedier/frp/pkg/util/log"
-	"github.com/fatedier/frp/pkg/util/version"
+	"github.com/marsofsnow/frpx/pkg/config"
+	"github.com/marsofsnow/frpx/pkg/consts"
+	"github.com/marsofsnow/frpx/pkg/metrics/mem"
+	"github.com/marsofsnow/frpx/pkg/util/log"
+	"github.com/marsofsnow/frpx/pkg/util/version"
 
 	"github.com/gorilla/mux"
 )

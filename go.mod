@@ -1,4 +1,4 @@
-module github.com/fatedier/frp
+module github.com/marsofsnow/frpx
 
 go 1.16
 

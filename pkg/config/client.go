@@ -20,8 +20,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/fatedier/frp/pkg/auth"
-	"github.com/fatedier/frp/pkg/util/util"
+	"github.com/marsofsnow/frpx/pkg/auth"
+	"github.com/marsofsnow/frpx/pkg/util/util"
 
 	"gopkg.in/ini.v1"
 )
