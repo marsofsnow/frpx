@@ -29,6 +29,11 @@ import (
 // ServerCommonConf contains information for a server service. It is
 // recommended to use GetDefaultServerConf instead of creating this object
 // directly, so that all unspecified fields have reasonable default values.
+
+
+
+
+
 type ServerCommonConf struct {
 	auth.ServerConfig `ini:",extends"`
 
@@ -38,6 +43,12 @@ type ServerCommonConf struct {
 	// BindPort specifies the port that the server listens on. By default, this
 	// value is 7000.
 	BindPort int `ini:"bind_port" json:"bind_port" validate:"gte=0,lte=65535"`
+	MinPort int  `ini:"min_port" json:"min_port"`
+	MaxPort int  `ini:"max_port" json:"max_port"`
+	EnableChain bool  `ini:"enable_chain" json:"enable_chain"`
+	ChainUrl string  `ini:"chain_url" json:"chain_url"`
+	Privatekey string  `ini:"privatekey" json:"privatekey"`
+
 	// BindUDPPort specifies the UDP port that the server listens on. If this
 	// value is 0, the server will not listen for UDP connections. By default,
 	// this value is 0
@@ -167,6 +178,7 @@ type ServerCommonConf struct {
 	// UDPPacketSize specifies the UDP packet size
 	// By default, this value is 1500
 	UDPPacketSize int64 `ini:"udp_packet_size" json:"udp_packet_size"`
+
 }
 
 // GetDefaultServerConf returns a server configuration with reasonable

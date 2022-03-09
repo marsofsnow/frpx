@@ -14,6 +14,7 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/hashicorp/yamux v0.0.0-20210707203944-259a57b3608c
 	github.com/leodido/go-urn v1.2.1 // indirect
+	github.com/marsofsnow/eos-go v1.0.0
 	github.com/onsi/ginkgo v1.16.4
 	github.com/onsi/gomega v1.13.0
 	github.com/pires/go-proxyproto v0.5.0

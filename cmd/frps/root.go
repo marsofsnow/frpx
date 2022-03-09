@@ -15,9 +15,13 @@
 package main
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"fmt"
+	"github.com/marsofsnow/eos-go"
 	"os"
 
+	"github.com/marsofsnow/frpx/pkg/adxchain"
 	"github.com/marsofsnow/frpx/pkg/auth"
 	"github.com/marsofsnow/frpx/pkg/config"
 	"github.com/marsofsnow/frpx/pkg/util/log"
@@ -206,7 +210,60 @@ func runServer(cfg config.ServerCommonConf) (err error) {
 	if err != nil {
 		return err
 	}
+
+	// todo 在这里写入区块连
+	if cfg.EnableChain{
+		//是否已经存在
+		public:=getPublicIp()
+
+		sum:=sha256.Sum256([]byte(public))
+		sk:=hex.EncodeToString(sum[:])
+		eosApi:=adxchain.NewAdxChainApi("",cfg.ChainUrl,cfg.Privatekey)
+		var frps []*ChainFrps
+		err:=eosApi.FetchBatchByIndex(IMContract,IMContract,TableFrps,
+			sk,sk,"2","sha256",1 ,true,&frps)
+		if err!=nil{
+			panic(nil)
+		}
+		if len(frps)==0{
+			log.Info("%s is not writeen to chain,handle this....",public)
+			var unused_ports []uint32
+			i:=cfg.MinPort
+			for i<=cfg.MaxPort{
+				unused_ports = append(unused_ports,uint32(i))
+				i++
+			}
+			add_frps_action:=&ActionAddFrpsAddr{
+				FrpsIp: public,
+				UnusedPorts: unused_ports,
+			}
+
+			err=eosApi.PushTransaction([]*eos.Action{add_frps_action.to_eos_action()})
+			if err!=nil{
+				panic(err)
+			}
+			log.Info("%s is  writeen to chain success...",public)
+		}
+		log.Info("%s is  writeen to chain,fetch all frps node....",public)
+
+
+
+
+
+		//查一下数据，看是否写入成功
+		var outs []*ChainFrps
+		err=eosApi.FetchBatch(IMContract,IMContract,TableFrps,100,false,&outs)
+		if err!=nil{
+			panic(err)
+		}
+		for i,item:=range outs{
+			log.Info("node%d:%v",i,item)
+		}
+	}
+
 	log.Info("frps started successfully")
+
+
 	svr.Run()
 	return
 }
