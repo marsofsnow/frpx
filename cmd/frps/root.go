@@ -235,6 +235,7 @@ func runServer(cfg config.ServerCommonConf) (err error) {
 			}
 			add_frps_action:=&ActionAddFrpsAddr{
 				FrpsIp: public,
+				ListenPort: uint32(cfg.BindPort),
 				UnusedPorts: unused_ports,
 			}
 

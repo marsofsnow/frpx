@@ -259,8 +259,5 @@ func (api *AdxChainApi) FetchMoreByIndex(code, scope, table string,
 	if err != nil {
 		return false,Status(http.StatusInternalServerError, err.Error())
 	}
-
-
 	return out.More,nil
-
 }

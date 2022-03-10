@@ -29,7 +29,7 @@ func getPublicIp() string {
 	// 获取 http response 的 body
 	body, _ := ioutil.ReadAll(resp.Body)
 	externIP := string(body)
-	log.Info("外网ip是:",externIP)
+	log.Info("外网ip是%s:",externIP)
 
 	return externIP
 }
