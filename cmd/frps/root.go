@@ -223,7 +223,7 @@ func runServer(cfg config.ServerCommonConf) (err error) {
 		err:=eosApi.FetchBatchByIndex(IMContract,IMContract,TableFrps,
 			sk,sk,"2","sha256",1 ,true,&frps)
 		if err!=nil{
-			panic(nil)
+			panic(err)
 		}
 		if len(frps)==0{
 			log.Info("%s is not writeen to chain,handle this....",public)
